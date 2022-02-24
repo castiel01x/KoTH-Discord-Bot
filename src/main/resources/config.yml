@@ -1,0 +1,37 @@
+bot-token: 'put_your_bot_token_here'
+activity-update-delay: 60 #60s delay
+activity-type: "WATCHING" #you can set it to PLAYING, STREAMING, WATCHING, LISTENING
+activity-msg: "{PLAYER-COUNT} players online!" #you can use {PLAYER-COUNT} in the message to showcase player count
+activity-streaming-url: "" #Twitch link, only needed if you set status_type to streaming
+
+koths:
+  '1':
+    name: "PVP"
+    thumbnail-image: "https://www.minecraft.net/content/dam/minecraft/pmp/pmp-minecraft-howitworks-beresourceful.png"
+
+koth-starting-embed:
+  enabled: true
+  channel-id: "" #ID of the channel the embed should be posted in
+  send-before-start: 30 #Send 30 minutes before koth starts
+  color: 0x0CF4E1 #RGB Color
+  title: "KoTH is starting in 30 minutes! **%koth%**"
+  fields:
+    '1':
+      name: "KoTH Coords"
+      value: "%coords%"
+      inline: true
+  footer: "• %date%"
+  footer-image: "https://avatars.githubusercontent.com/u/56901212?s=96&v=4"
+
+koth-started-embed:
+  enabled: true
+  channel-id: "" #ID of the channel the embed should be posted in
+  color: 0x4AF40C #RGB Color
+  title: "KoTH has started! **%koth%**"
+  fields:
+    '1':
+      name: "KoTH Coords"
+      value: "%coords%"
+      inline: true
+  footer: "• %date%"
+  footer-image: "https://avatars.githubusercontent.com/u/56901212?s=96&v=4"
