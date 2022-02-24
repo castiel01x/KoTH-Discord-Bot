@@ -110,7 +110,7 @@ public class KoTHBot extends JavaPlugin {
     }
 
     private boolean getDateDiff(ZonedDateTime date1, ZonedDateTime date2) {
-        return (date1.toEpochSecond() / 60) >= (date2.toEpochSecond() / 60) - getConfig().getLong("koth-starting-embed.send-before-start");
+        return (date1.toEpochSecond() / 60) >= (date2.toEpochSecond() / 60) - getConfig().getLong("koth-starting-embed.send-before-start") && date1.toEpochSecond() < date2.toEpochSecond();
     }
 
     public static KoTHBot getInstance() {
